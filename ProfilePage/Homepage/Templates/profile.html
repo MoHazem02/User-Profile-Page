@@ -19,8 +19,13 @@
               aria-expanded="false">
               <div class="media align-items-center">
                 <span class="avatar avatar-sm rounded-circle">
-                  <img alt="Image placeholder"
-                    src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-4.jpg">
+                  {% if user.profile_picture == "" %}
+                    <img src="https://th.bing.com/th/id/R.be953f29410b3d18ef0e5e0fbd8d3120?rik=Dm2iDRVLgVcpdA&pid=ImgRaw&r=0"
+                      class="rounded-circle">
+                    {% else %}
+                    <img src="{{user.profile_picture}}"
+                      class="rounded-circle">
+                    {% endif %}
                 </span>
                 <div class="media-body ml-2 d-none d-lg-block">
                   <span class="mb-0 text-sm  font-weight-bold">{{ user.first_name }} {{ user.last_name }}</span>
@@ -83,7 +88,7 @@
                 <div class="card-profile-image">
                   <a href="">
                     {% if user.profile_picture == "" %}
-                    <img src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-4.jpg"
+                    <img src="https://th.bing.com/th/id/R.be953f29410b3d18ef0e5e0fbd8d3120?rik=Dm2iDRVLgVcpdA&pid=ImgRaw&r=0"
                       class="rounded-circle">
                     {% else %}
                     <img src="{{user.profile_picture}}"
@@ -122,23 +127,23 @@
                 <hr class="my-4">
                 <ul class="social">
                   <li>
-                    <a class="facebook" href="#">
+                    <a class="facebook" href="{{user.facebook_account}}" target="_blank">
 
                       <i class="fa-brands fa-facebook"></i>
                     </a>
                   </li>
                   <li>
-                    <a class="twitter" href="#">
+                    <a class="twitter" href="{{user.twitter_account}}" target="_blank">
                       <i class="fa-brands fa-twitter" aria-hidden="true"></i>
                     </a>
                   </li>
                   <li>
-                    <a class="facebook" href="#">
+                    <a class="facebook" href="{{user.linkedin_account}}" target="_blank">
                       <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                     </a>
                   </li>
                   <li>
-                    <a class="google" href="#">
+                    <a class="google" href="{{user.github_account}}" target="_blank">
                       <i class="fa-brands fa-github" aria-hidden="true"></i>
                     </a>
                   </li>
