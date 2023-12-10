@@ -11,7 +11,7 @@
       <div class="container-fluid">
         <!-- Brand -->
         <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block"
-          href="../">User profile</a>
+          href="../logout">Log Out</a>
         <!-- User -->
         <ul class="navbar-nav align-items-center d-none d-md-flex">
           <li class="nav-item dropdown">
@@ -19,8 +19,8 @@
               aria-expanded="false">
               <div class="media align-items-center">
                 <span class="avatar avatar-sm rounded-circle">
-                  {% if user.profile_picture == "" %}
-                    <img src="https://th.bing.com/th/id/R.be953f29410b3d18ef0e5e0fbd8d3120?rik=Dm2iDRVLgVcpdA&pid=ImgRaw&r=0"
+                  {% if user.profile_picture is None %}
+                    <img src="https://st3.depositphotos.com/9998432/13335/v/450/depositphotos_133352010-stock-illustration-default-placeholder-man-and-woman.jpg"
                       class="rounded-circle">
                     {% else %}
                     <img src="{{user.profile_picture}}"
@@ -87,8 +87,8 @@
               <div class="col-lg-3 order-lg-2">
                 <div class="card-profile-image">
                   <a href="#">
-                    {% if user.profile_picture == "" %}
-                      <img src="https://www.thefamouspeople.com/profiles/images/mohamed-salah-4.jpg"
+                    {% if user.profile_picture is None %}
+                      <img src="https://st3.depositphotos.com/9998432/13335/v/450/depositphotos_133352010-stock-illustration-default-placeholder-man-and-woman.jpg"
                       class="rounded-circle">
                     {% else %}
                     <img src="{{user.profile_picture}}"
