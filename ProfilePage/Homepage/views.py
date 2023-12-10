@@ -3,14 +3,18 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login, logout
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
-from .models import User
+from .models import User, Posts
 from django.db import IntegrityError
 
 
 def index(request):
     if not request.user.is_authenticated:
         return HttpResponseRedirect(reverse("login"))
-    return render(request, "profile.html", {"user": User.objects.get(username=request.user.username)})
+    if request.method == "POST":
+        post_content = request.POST["post-content"]
+        new_post = Posts(text=post_content, author=request.user)
+        new_post.save()
+    return render(request, "profile.html", {"user": User.objects.get(username=request.user.username), "posts": Posts.objects.filter(author=request.user)})
 
 
 def login_view(request):

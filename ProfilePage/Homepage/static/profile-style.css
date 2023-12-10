@@ -2142,9 +2142,17 @@ p {
 .social i{
   padding-top: 15px;
 }
-#save-edit
+#save-edit, #make-post
 {
   position: absolute;
   top: -70px;
   right: -580px;
+}
+.post-container 
+{
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
