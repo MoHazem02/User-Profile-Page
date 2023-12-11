@@ -2156,3 +2156,17 @@ p {
   padding: 20px;
   margin-bottom: 20px;
 }
+#date-post
+{
+  position: relative;
+  left: 40%;
+  color: #b44403;
+}
+#post-author
+{
+  color: #b44403;
+}
+#post-text
+{
+  font: 20px solid black;
+}

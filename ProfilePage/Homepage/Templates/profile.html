@@ -173,8 +173,9 @@
                   <div class="row">
                     <div class="col-lg-6">
                       <div class="post-container">
-                        <label class="form-control-label" for="input-username">{{post.author}}</label>
-                        <p>{{post.text}}</p>
+                        <label class="form-control-label" id="post-author">{{post.author}}</label> 
+                        <label class="form-control-label" id="date-post">{{post.date|date:"F j, Y H:i"}}</label>
+                        <p id="post-text">{{post.text}}</p>
                       </div>
                     </div>
                   </div>

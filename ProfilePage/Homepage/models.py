@@ -18,6 +18,8 @@ class User(AbstractUser):
 class Posts(models.Model):
     text = models.CharField(max_length=300)
     author = models.ForeignKey(User, on_delete=models.PROTECT)
+    date = models.DateTimeField(auto_now_add=True)
+
 
     def __str__(self) -> str:
         return self.text
