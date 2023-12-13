@@ -32,7 +32,8 @@ Follow these steps to set up and run the User Profile Page web application:
 
 3. Install the required dependencies:
    ```bash
-   pip install -r requirements.txt
+   pip install Django==3.2.9
+
    ```
 
 4. Apply migrations to create the database tables:
