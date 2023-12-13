@@ -4,6 +4,10 @@
 
 Welcome to the User Profile Page web application project! This project is built using Django on the backend and allows users to create and customize their profile pages. Users can write text posts, add a profile picture, and link their Facebook, Twitter, LinkedIn, and GitHub accounts. The application also includes user authentication features such as login, logout, and sign up. The project uses SQLite3 as the database management system.
 
+![image](https://github.com/MoHazem02/User-Profile-Page/assets/66066832/7037c107-1634-4f42-9dcd-523f990cbeb6)
+
+![image](https://github.com/MoHazem02/User-Profile-Page/assets/66066832/2d721e7f-0be9-4de6-b53c-27022a232667)
+
 ## Features
 
 1. **Text Posts**: Users can create and share text posts on their profile page.
